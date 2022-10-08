@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Personajes, Result } from '../../interfaces/personajesInterface'
+import { Personaje } from './Personaje'
 
 export const ListadoPersonajes = () => {
 	const [personajes, setPersonajes] = useState<Result[]>([])
@@ -24,10 +25,7 @@ export const ListadoPersonajes = () => {
 					key={personaje.id}
 					style={{ backgroundColor: 'cyan', padding: 2, marginRight: 2 }}
 				>
-					<h1>{personaje.name}</h1>
-					<p>{personaje.gender}</p>
-					<p>{personaje.status}</p>
-					<img src={personaje.image} alt="" />
+					<Personaje personaje={personaje} />
 				</div>
 			))}
 		</div>
