@@ -2,7 +2,6 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Personajes, Result } from '../../interfaces/personajesInterface'
 import { Personaje } from './Personaje'
-
 export const ListadoPersonajes = () => {
 	const [personajes, setPersonajes] = useState<Result[]>([])
 
